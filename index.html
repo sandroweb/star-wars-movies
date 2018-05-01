@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" data-framework="angularjs">
   <head>
-    <title>Star Wars Movies</title>
+    <title>Star Wars</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/js/vendors/bower/bootstrap/dist/css/bootstrap.min.css">
@@ -10,13 +10,13 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i" rel="stylesheet">
   </head>
   <body>
-    <div id="main">
+    <div id="main" ng-controller="DataController">
 
       <header-bar></header-bar>
 
       <div class="container container-fluid">
         <div class="row" id="container">
-          <div class="col-sm-9" id="page-container">
+          <div class="col-sm-12 col-md-12" id="page-container">
             <div ui-view="main-content" id="main-content"></div>
           </div>
         </div>

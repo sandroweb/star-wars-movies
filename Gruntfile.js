@@ -14,7 +14,7 @@ module.exports = function (grunt) {
         autoIndex: 'index.html',
         ext: 'html',
         runInBackground: true,
-        openBrowser : true,
+        openBrowser : false,
       }
     },
 

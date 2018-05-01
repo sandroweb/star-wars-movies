@@ -1,0 +1,57 @@
+<div class="row" ng-controller="MovieController">
+  <div class="col-sm-12 col-md-12" ng-repeat="movie in movies" ng-if="movie.slug == slug">
+    
+    <div class="row">
+      <div class="jumbotron">
+        <h1>{{movie.title}}</h1>
+        <p><strong>De: </strong>{{movie.release_date | date: 'dd/MM/yyyy' }}</p>
+        <p><strong>Ordem: </strong>{{movie.episode_id}}</p>
+        <p><strong>Diretor: </strong>{{movie.director}}</p>
+        <p><strong>Produtor: </strong>{{movie.producer}}</p>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-heading">Descrição</div>
+        <div class="panel-body">
+          {{movie.opening_crawl}}
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-heading">Personagens</div>
+        <div class="panel-body">
+          <div class="col col-sm-4 col-md-3" ng-repeat="people in movie.characters">
+            <person-button data-url="{{people}}"></person-button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-heading">Planetas</div>
+        <div class="panel-body">
+          <div class="col col-sm-4 col-md-3" ng-repeat="planet in movie.planets">
+            <planet-button data-url="{{planet}}"></planet-button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-heading">Naves estelares</div>
+        <div class="panel-body">
+          <div class="col col-sm-4 col-md-3" ng-repeat="starship in movie.starships">
+            <starship-button data-url="{{starship}}"></starship-button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

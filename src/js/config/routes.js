@@ -3,19 +3,22 @@ define([
   'angularUIRouter',
   'controllers/pages/HttpStatus404Controller',
   'controllers/pages/HomeController',
-], function (angular, angularUIRouter, HttpStatus404Controller, HomeController) {
+  'controllers/pages/MovieController',
+], function (angular, angularUIRouter, HttpStatus404Controller, HomeController, MovieController) {
   var moduleName = 'RoutesModule',
     templatesDirectory = 'src/template/',
     app = angular.module(moduleName, [
       'ui.router',
       HttpStatus404Controller.moduleName,
-      HomeController.moduleName
+      HomeController.moduleName,
+      MovieController.moduleName
     ]);
 
-  app.config(function ($stateProvider, $urlRouterProvider) {
+  app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider
       .otherwise('/404');
 
+    $locationProvider.hashPrefix('');
 
     $stateProvider.state(HttpStatus404Controller.moduleName, {
       url: HttpStatus404Controller.slug,
@@ -37,6 +40,18 @@ define([
         }
       }
     });
+
+    $stateProvider.state(MovieController.moduleName, {
+      name: MovieController.moduleName,
+      url: MovieController.slug,
+      views: {
+        'main-content': {
+          templateUrl: templatesDirectory + MovieController.templateName,
+          controller: MovieController.controllerName
+        }
+      }
+    });
+
   });
   return moduleName;
 });
