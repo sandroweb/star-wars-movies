@@ -1,0 +1,23 @@
+{
+  "name": "star-wars-movies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sandro Santos <sandro@sandrosantos.art.br>",
+  "license": "ISC",
+  "dependencies": {
+    "angular-ui-bootstrap": "^0.14.3"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-stylus": "^0.20.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-http-server": "^2.0.0",
+    "grunt-notify": "^0.4.5",
+    "matchdep": "*",
+    "nib": "^1.1.2"
+  }
+}

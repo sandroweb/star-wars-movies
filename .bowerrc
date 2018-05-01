@@ -1,0 +1,18 @@
+{
+  "name": "star-wars-movies",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Sandro Santos <sandro@sandrosantos.art.br>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "directory": "src/js/vendors/bower/"
+}

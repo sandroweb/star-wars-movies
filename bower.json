@@ -1,0 +1,23 @@
+{
+  "name": "star-wars-movies",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Sandro Santos <sandro@sandrosantos.art.br>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-slugify": "^1.0.1",
+    "angular-ui-router": "^1.0.15",
+    "angular": "^1.6.10",
+    "bootstrap": "^3.3.0"
+  }
+}

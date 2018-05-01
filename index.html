@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" data-framework="angularjs">
+  <head>
+    <title>Star Wars Movies</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/js/vendors/bower/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/js/vendors/bower/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i" rel="stylesheet">
+  </head>
+  <body>
+    <div id="main">
+
+      <header-bar></header-bar>
+
+      <div class="container container-fluid">
+        <div class="row" id="container">
+          <div class="col-sm-9" id="page-container">
+            <div ui-view="main-content" id="main-content"></div>
+          </div>
+        </div>
+      </div>
+
+      <footer-bar></footer-bar>
+
+    </div>
+    <script data-main="src/js/main.js" src="//marcoslin.github.io/angularAMD/js/lib/requirejs/require.js"></script>
+  </body>
+</html>
