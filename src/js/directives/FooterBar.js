@@ -9,7 +9,7 @@ define([
     return {
       restrict: 'E',
       link: function ($scope, $element, $attr) {
-        
+        //
       },
       templateUrl: 'src/template/directives/footer-bar.html'
     };

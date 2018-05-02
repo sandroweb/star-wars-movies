@@ -6,7 +6,7 @@ define([
   scope.moduleName = 'Home';
   scope.pageTitle = 'Filmes Star Wars';
   scope.controllerName = scope.moduleName + 'Controller';
-  scope.slug = '/';
+  scope.slug = '/home';
   scope.templateName = 'home.html';
   scope.app = angular.module(scope.moduleName, [movieButton.moduleName]);
 

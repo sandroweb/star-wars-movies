@@ -23,7 +23,6 @@ define([
             imageObj = response.data.items[0].pagemap.cse_image;
           }
           image = imageObj[0].src;
-          // console.log(response.data.items[0].pagemap.cse_image[0]);
           $rootScope.images[term] = image;
           callback($rootScope.images[term]);
         });

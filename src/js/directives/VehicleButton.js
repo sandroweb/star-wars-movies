@@ -16,7 +16,6 @@ define([
         };
         VehicleService.getVehicleByAPIUrl($attr.url, function (response) {
           $scope.data = response;
-          console.log(response);
         });
       },
       templateUrl: 'src/template/directives/vehicle-button.html'

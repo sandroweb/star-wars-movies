@@ -4,10 +4,14 @@
     <div class="row">
       <div class="jumbotron">
         <h1>{{data.name}}</h1>
-        <!-- <p><strong>De: </strong>{{movie.release_date | date: 'dd/MM/yyyy' }}</p>
-        <p><strong>Ordem: </strong>{{movie.episode_id}}</p>
-        <p><strong>Diretor: </strong>{{movie.director}}</p>
-        <p><strong>Produtor: </strong>{{movie.producer}}</p> -->
+        <p><strong>Período de rotação: </strong>{{data.rotation_period}}</p>
+        <p><strong>Período orbital: </strong>{{data.orbital_period}}</p>
+        <p><strong>Diâmetro: </strong>{{data.diameter}}</p>
+        <p><strong>Clima: </strong>{{data.climate}}</p>
+        <p><strong>Gravidade: </strong>{{data.gravity}}</p>
+        <p><strong>Terreno: </strong>{{data.terrain}}</p>
+        <p><strong>Superfície com água: </strong>{{data.surface_water}}</p>
+        <p><strong>População: </strong>{{data.population}}</p>
       </div>
     </div>
     
@@ -22,60 +26,16 @@
       </div>
     </div>
 
-    <!-- <div class="row" ng-if="data.starships.length">
-      <div class="panel panel-default">
-        <div class="panel-heading">Naves estelares em que <strong>{{data.name}}</strong> esteve</div>
-        <div class="panel-body">
-          <div class="col col-sm-4 col-md-3" ng-repeat="starship in data.starships">
-            <starship-button data-url="{{starship}}"></starship-button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row" ng-if="data.vehicles.length">
-      <div class="panel panel-default">
-        <div class="panel-heading">Veículos em que <strong>{{data.name}}</strong> esteve</div>
-        <div class="panel-body">
-          <div class="col col-sm-4 col-md-3" ng-repeat="vehicle in data.vehicles">
-            <vehicle-button data-url="{{vehicle}}"></vehicle-button>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    
-    <!-- <div class="row">
-      <div class="panel panel-default">
-        <div class="panel-heading">Personagens</div>
-        <div class="panel-body">
-          <div class="col col-sm-4 col-md-3" ng-repeat="people in movie.characters">
-            <person-button data-url="{{people}}"></person-button>
-          </div>
-        </div>
-      </div>
-    </div>
-    
     <div class="row">
       <div class="panel panel-default">
-        <div class="panel-heading">Planetas</div>
+        <div class="panel-heading">Residentes</div>
         <div class="panel-body">
-          <div class="col col-sm-4 col-md-3" ng-repeat="planet in movie.planets">
-            <planet-button data-url="{{planet}}"></planet-button>
+          <div class="col col-sm-4 col-md-3" ng-repeat="resident in data.residents">
+            <person-button data-url="{{resident}}"></person-button>
           </div>
         </div>
       </div>
     </div>
-    
-    <div class="row">
-      <div class="panel panel-default">
-        <div class="panel-heading">Naves estelares</div>
-        <div class="panel-body">
-          <div class="col col-sm-4 col-md-3" ng-repeat="starship in movie.starships">
-            <starship-button data-url="{{starship}}"></starship-button>
-          </div>
-        </div>
-      </div>
-    </div> -->
 
   </div>
 </div>

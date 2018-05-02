@@ -6,7 +6,7 @@ define([
   scope.app = angular.module(scope.moduleName, []);
   scope.app.service(scope.moduleName, function ($http, $rootScope) {
     var self = this;
-    $rootScope.starship = $rootScope.starship || {};
+    $rootScope.starships = $rootScope.starships || {};
     this.getStarshipIdByUrl = function (url) {
       var urlArr = url.split('/');
       return urlArr[urlArr.length - 2];
@@ -21,16 +21,15 @@ define([
     };
 
     this.getStarshipByAPIUrl = function (url, callback) {
-      if ($rootScope.starship[url]) {
-        callback($rootScope.starship[url]);
+      if ($rootScope.starships[url]) {
+        callback($rootScope.starships[url]);
       } else {
-        console.log(url);
         $http.get(url, { cache: true }).then(function (response) {
           var id = self.getStarshipIdByUrl(url),
             link = self.getStarshipLinkById(id);
           response.data.id = id;
           response.data.link = link;
-          $rootScope.starship[url] = response.data;
+          $rootScope.starships[url] = response.data;
           callback(response.data);
         });
       }

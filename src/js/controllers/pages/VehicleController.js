@@ -18,7 +18,6 @@ define([
     $scope.data = {};
     VehicleService.getVehicleByAPIUrl(VehicleService.getVehicleApiUrlById($scope.id), function (response) {
       $scope.data = response;
-      // console.log($scope.data);
     });
   });
   return scope;

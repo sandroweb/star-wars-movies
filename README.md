@@ -31,3 +31,8 @@ $ grunt
 ## Grunt
 
 - O Comando `$ grunt` builda os arquivos `*.styl`, cria um server para rodar projeto no `http://localhost:8888` e já abre o endereço em uma janela do browser, além de ficar escutando futuras alterações nos arquivos `*.styl`.
+
+
+## GooglePictureService
+
+- Desenvolvi a `GooglePictureService` para carregar imagens para os filmes, personagens, veículos, etc. O problema foi o limite da API que é muito pequeno, por isso desativei, mas o código está funcionando. Se tiver uma conta com um bom limite de requisições será possível utilizar.

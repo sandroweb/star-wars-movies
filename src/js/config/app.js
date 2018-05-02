@@ -13,7 +13,6 @@ define([
       app = angular.module('app', ['slugifier', headerBar.moduleName, footerBar.moduleName, configRoutes]);
 
     app.controller('DataController', function ($scope, $http, $filter, $rootScope) {
-      
       $rootScope.movies = [];
       $http.get('https://swapi.co/api/films/').then(function (response) {
         var i,
@@ -27,7 +26,6 @@ define([
           $rootScope.movies[slug].link = '#/movie/' + slug;
           $rootScope.moviesByIndex.push($rootScope.movies[slug]);
         }
-        console.log($rootScope.movies);
       });
     });
 

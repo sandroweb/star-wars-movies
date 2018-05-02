@@ -6,7 +6,7 @@ define([
   scope.app = angular.module(scope.moduleName, []);
   scope.app.service(scope.moduleName, function ($http, $rootScope) {
     var self = this;
-    $rootScope.people = $rootScope.people || {};
+    $rootScope.planets = $rootScope.planets || {};
     this.getPlanetIdByUrl = function (url) {
       var urlArr = url.split('/');
       return urlArr[urlArr.length - 2];
@@ -21,15 +21,15 @@ define([
     };
 
     this.getPlanetByAPIUrl = function (url, callback) {
-      if ($rootScope.people[url]) {
-        callback($rootScope.people[url]);
+      if ($rootScope.planets[url]) {
+        callback($rootScope.planets[url]);
       } else {
         $http.get(url, { cache: true }).then(function (response) {
           var id = self.getPlanetIdByUrl(url),
             link = self.getPlanetLinkById(id);
           response.data.id = id;
           response.data.link = link;
-          $rootScope.people[url] = response.data;
+          $rootScope.planets[url] = response.data;
           callback(response.data);
         });
       }

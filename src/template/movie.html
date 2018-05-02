@@ -52,6 +52,17 @@
         </div>
       </div>
     </div>
+    
+    <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-heading">Veículos</div>
+        <div class="panel-body">
+          <div class="col col-sm-4 col-md-3" ng-repeat="vehicle in movie.vehicles">
+            <vehicle-button data-url="{{vehicle}}"></vehicle-button>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
 </div>

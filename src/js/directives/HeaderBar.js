@@ -5,11 +5,11 @@ define([
   scope.moduleName = 'HeaderBar';
   scope.directiveName = 'headerBar';
   scope.app = angular.module(scope.moduleName, []);
-  scope.app.directive(scope.directiveName, function () {
+  scope.app.directive(scope.directiveName, function ($rootScope) {
     return {
       restrict: 'E',
       link: function ($scope, $element, $attr) {
-        
+        //
       },
       templateUrl: 'src/template/directives/header-bar.html'
     };

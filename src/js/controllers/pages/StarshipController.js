@@ -18,7 +18,6 @@ define([
     $scope.data = {};
     StarshipService.getStarshipByAPIUrl(StarshipService.getStarshipApiUrlById($scope.id), function (response) {
       $scope.data = response;
-      // console.log($scope.data);
     });
   });
   return scope;

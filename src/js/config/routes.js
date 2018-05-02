@@ -1,19 +1,17 @@
 define([
   'angular',
   'angularUIRouter',
-  'controllers/pages/HttpStatus404Controller',
   'controllers/pages/HomeController',
   'controllers/pages/MovieController',
   'controllers/pages/PeopleController',
   'controllers/pages/StarshipController',
   'controllers/pages/PlanetController',
   'controllers/pages/VehicleController',
-], function (angular, angularUIRouter, HttpStatus404Controller, HomeController, MovieController, PeopleController, StarshipController, PlanetController, VehicleController) {
+], function (angular, angularUIRouter, HomeController, MovieController, PeopleController, StarshipController, PlanetController, VehicleController) {
   var moduleName = 'RoutesModule',
     templatesDirectory = 'src/template/',
     app = angular.module(moduleName, [
       'ui.router',
-      HttpStatus404Controller.moduleName,
       HomeController.moduleName,
       MovieController.moduleName,
       PeopleController.moduleName,
@@ -24,19 +22,9 @@ define([
 
   app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider
-      .otherwise('/404');
+      .otherwise('/home');
 
     $locationProvider.hashPrefix('');
-
-    $stateProvider.state(HttpStatus404Controller.moduleName, {
-      url: HttpStatus404Controller.slug,
-      views: {
-        'main-content': {
-          templateUrl: templatesDirectory + HttpStatus404Controller.templateName,
-          controller: HttpStatus404Controller.controllerName
-        }
-      }
-    });
 
     $stateProvider.state(HomeController.moduleName, {
       name: HomeController.moduleName,

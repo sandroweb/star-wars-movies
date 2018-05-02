@@ -4,8 +4,16 @@
     <div class="row">
       <div class="jumbotron">
         <h1>{{data.name}}</h1>
+        <p><strong>Modelo: </strong>{{data.model}}</p>
+        <p><strong>Fabricante: </strong>{{data.manufacturer}}</p>
+        <p ng-if="data.cost_in_credits != 'unknown'"><strong>Custo em créditos: </strong>{{data.cost_in_credits}}</p>
+        <p><strong>Comprimento: </strong>{{data.length}}</p>
+        <p><strong>Velocidade máxima: </strong>{{data.max_atmosphering_speed}}</p>
+        <p><strong>Equipe técnica: </strong>{{data.crew}}</p>
+        <p><strong>Passageiros: </strong>{{data.passengers}}</p>
+        <p><strong>Capacidade de carga: </strong>{{data.cargo_capacity}}</p>
+        <p><strong>Classe: </strong>{{data.starship_class}}</p>
         <!-- <p><strong>De: </strong>{{movie.release_date | date: 'dd/MM/yyyy' }}</p>
-        <p><strong>Ordem: </strong>{{movie.episode_id}}</p>
         <p><strong>Diretor: </strong>{{movie.director}}</p>
         <p><strong>Produtor: </strong>{{movie.producer}}</p> -->
       </div>
