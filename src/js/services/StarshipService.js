@@ -1,6 +1,6 @@
 define([
   'angular',
-], function (angular, AlertController) {
+], function (angular) {
   var scope = {};
   scope.moduleName = 'StarshipService';
   scope.app = angular.module(scope.moduleName, []);
@@ -13,7 +13,11 @@ define([
     };
 
     this.getStarshipLinkById = function (id) {
-      return '#/starships/' + id;
+      return '#/starship/' + id;
+    };
+
+    this.getStarshipApiUrlById = function (id) {
+      return 'https://swapi.co/api/starships/' + id + '/';
     };
 
     this.getStarshipByAPIUrl = function (url, callback) {

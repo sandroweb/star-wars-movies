@@ -1,6 +1,6 @@
 define([
   'angular',
-], function (angular, AlertController) {
+], function (angular) {
   var scope = {};
   scope.moduleName = 'PlanetService';
   scope.app = angular.module(scope.moduleName, []);
@@ -14,6 +14,10 @@ define([
 
     this.getPlanetLinkById = function (id) {
       return '#/planet/' + id;
+    };
+
+    this.getPlanetApiUrlById = function (id) {
+      return 'https://swapi.co/api/planets/' + id + '/';
     };
 
     this.getPlanetByAPIUrl = function (url, callback) {

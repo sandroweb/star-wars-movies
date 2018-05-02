@@ -1,6 +1,6 @@
 define([
   'angular',
-], function (angular, AlertController) {
+], function (angular) {
   var scope = {};
   scope.moduleName = 'PeopleService';
   scope.app = angular.module(scope.moduleName, []);
@@ -14,6 +14,10 @@ define([
 
     this.getPeopleLinkById = function (id) {
       return '#/people/' + id;
+    };
+
+    this.getPeopleApiUrlById = function (id) {
+      return 'https://swapi.co/api/people/' + id + '/';
     };
 
     this.getPeopleByAPIUrl = function (url, callback) {

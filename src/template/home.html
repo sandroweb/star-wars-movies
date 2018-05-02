@@ -1,7 +1,25 @@
-<div class="row">
-  <div class="col-sm-12 col-md-12 movie-item" ng-repeat="movie in movies">
-    <h4>
-      <a class="btn btn-default btn-large" href="{{movie.url}}">{{movie.title}}</a>
-    </h4>
+<div class="row" ng-controller="HomeController">
+  <div class="col-sm-12 col-md-12 movie-item">
+    
+    <div class="row">
+      <div class="jumbotron">
+        <h1>Filmes</h1>
+        <!-- <p><strong>Altura: </strong>{{data.height}}</p>
+        <p ng-if="data.hair_color != 'n/a'"><strong>Cor do cabelo: </strong>{{data.hair_color}}</p>
+        <p ng-if="data.skin_color != 'n/a'"><strong>Cor da pele: </strong>{{data.skin_color}}</p>
+        <p ng-if="data.eye_color != 'n/a'"><strong>Cor dos olhos: </strong>{{data.eye_color}}</p>
+        <p ng-if="data.homeworldObj"><strong>Origem: </strong><a href="{{data.homeworldObj.link}}">{{data.homeworldObj.name}}</a></p> -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="col col-sm-4 col-md-3" ng-repeat="movie in movies">
+            <movie-button data-slug="{{movie.slug}}"></movie-button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

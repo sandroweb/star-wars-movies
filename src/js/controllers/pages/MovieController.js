@@ -8,7 +8,7 @@ define([
   scope.moduleName = 'Movie';
   scope.pageTitle = 'Filmes Star Wars';
   scope.controllerName = scope.moduleName + 'Controller';
-  scope.slug = '/movies/:slug';
+  scope.slug = '/movie/:slug';
   scope.templateName = 'movie.html';
   scope.app = angular.module(scope.moduleName, [personButton.moduleName, planetButton.moduleName, starshipButton.moduleName]);
 

@@ -1,6 +1,6 @@
 define([
   'angular',
-], function (angular, AlertController) {
+], function (angular) {
   var scope = {};
   scope.getSearchUrl = function (term) {
     return 'https://www.googleapis.com/customsearch/v1?q=' + escape(term) + '&key=AIzaSyC34QH_itl0FGHSN85wTbEwOHewgjUULig&imageSize=medium&cx=013004472123043811264:cnutbz0iwh8&num=1';
